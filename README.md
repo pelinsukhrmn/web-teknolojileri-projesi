@@ -8,3 +8,7 @@ Kişisel bir web sitesi geliştirilecek. Site kendinizi ve memleketinizi tanıta
 Temel Ana Sayfa, Hakkımda, CV ,Şehir, Mirasımız, Sanat ,İletişim, Giriş Sayfalarını oluşturdum.
 Ufak Form Gönderme ve API işlemlerinde sıkıntı yaşıyorum.
 Sayfalar arası geçişi nav ile sağladım.
+
+## Gün 3
+Hala Form gönderme konusunda sıkıntı yaşıyorum.
+Ana sayfa olan index.html yi ve hakkimda.html yi yükledim.
