@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Siteme Hoş Geldiniz</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    .navbar {
+      background-color: #f8f9fa;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+    }
+
+    .nav-link {
+      color: #333;
+      font-weight: 500;
+    }
+
+    .nav-link:hover {
+      color: #007bff;
+    }
+
+    .hosgeldin-mesaji {
+      background-color: #e9ecef;
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Pelinsu Kahraman</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Ana Sayfa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="hakkimda.html">Hakkımda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cv.html">CV</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sehir.html">Şehir</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="mirasimiz.html">Mirasımız</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="film.html">Film</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="iletisim.html">İletişim</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="giris.html">Giriş Yap</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <div class="container mt-5">
+    <div class="text-center">
+      <h1>Web Siteme Hoş Geldiniz !</h1>
+      <p class="lead">Bilgisayar Mühendisliği Öğrencisi | Müzik | Fotoğrafçılık</p>
+    </div>
+    <section>
+      <h2 class="mb-4">Tanıtım</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <h6>Kendim Hakkında</h6>
+          <p>Adım Pelinsu Kahraman.</p>
+          <br>
+          <p>Sakarya Üniversitesi'nde Bilgisayar Mühendisliği öğrencisiyim.</p>
+          <br>
+          <p>Kocaeli'de yaşıyorum. Merkez Bankası Derince Anadolu Lisesi'nden mezun oldum. </p>
+          <br>
+          <p>Hobilerim müzik dinlemek ,şarkı söylemek ,yüzmek. Moda ve spor ilgi alanlarımdır.</p>
+        </div>
+      </div>
+    </section>
+    <hr>
+
+    <div style="margin-top: 30px; text-align: center;">
+      <div id="youtube-player" style="display: none;"></div>
+      <img src="http://localhost/projem/img/fo.jpg" alt="Frank Ocean"
+        style="max-width: 500px; border-radius: 10px; cursor: pointer;" onclick="playFrankOceanSong()">
+      <p style="margin-top: 10px; color: #666;">(Swim Good çalacak .)</p>
+    </div>
+    <script>
+
+      var tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/iframe_api";
+      document.head.appendChild(tag);
+
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('youtube-player', {
+          height: '0',
+          width: '0',
+          videoId: 'ic1nhvWBvIo',
+          playerVars: { autoplay: 0, controls: 0, disablekb: 1 }
+        });
+      }
+
+      function playFrankOceanSong() {
+        if (player.getPlayerState() === YT.PlayerState.PLAYING) {
+          player.pauseVideo();
+        } else {
+          player.playVideo();
+        }
+      }
+    </script>
+
+
+    <section>
+      <h2 class="mb-4">Hobilerim & İlgi Alanlarım</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title"><span class="hobby-icon"></span> Müzik & Sanat</h5>
+              <ul>
+                <li>Piyano Çalıyorum.</li>
+                <li>Ücretsiz Konserlere Gitmeyi Seviyorum.</li>
+                <li>Romantik-Komedi Filmleri İzliyorum</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title"><span class="hobby-icon"></span> Oyun & Spor</h5>
+              <ul>
+                <li>Genshin İmpact , Counter Strike Oynuyorum.</li>
+                <li>Fitness Yapıyorum.</li>
+                <li>Düzenli Olarak Yürüyüş Yapıyorum.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title"><span class="hobby-icon"></span> Moda & Fotoğraf</h5>
+              <ul>
+                <li>Moda Trendlerini Takip Ediyorum.</li>
+                <li>Konsept Çekimlere İlgim Var.</li>
+                <li>Sokak Fotoğrafçılığı Kursundayım.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="mb-4">Teknoloji & Projeler</h2>
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Teknik Becerilerim</h5>
+          <div class="mb-3">
+            <span class="badge bg-primary">C++</span>
+            <span class="badge bg-primary">C#</span>
+            <span class="badge bg-primary">JavaScript</span>
+            <span class="badge bg-primary">HTML/CSS</span>
+            <span class="badge bg-primary">MySQL</span>
+          </div>
+          <h5 class="card-title mt-3">Projeler</h5>
+          <ul>
+            <strong> Üniversemizin verdiği projelerden bu zamana kadar yaptıklarım:</strong>
+            <li>Tavuk Çiftliği İle Tavukların Durumunu Kontrol Ettim</li>
+            <li>Bilgi Yarışması Yaptım</li>
+            <li>Tatil Sitesi Uygulaması Yaptım</li>
+            <li>Kendimi Tanıtan Web Sitesi Uygulaması Yapıyorum</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="mb-4">Sosyal Medya</h2>
+      <div class="list-group-item-group">
+        <a href="https://www.linkedin.com/in/pelinsu-k-6311a21a2/" target="_blank"
+          class="list-group-item">
+          <i class="linkedin"></i> <strong>LinkedIn :</strong> linkedin.com/in/pelinsu-kahraman
+        </a>
+        <a href="https://github.com/pelinsukhrmn" target="_blank" class="list-group-item">
+          <i class="github"></i> <strong>GitHub :</strong> github.com/pelinsukhrmn
+        </a>
+        <a href="https://www.instagram.com/pelintopia/" target="_blank" class="list-group-item">
+          <i class="instagram"></i> <strong>Instagram :</strong> @pelintopia
+        </a>
+        <a href="mailto:pelinsumarinette@gmail.com" class="list-group-item">
+          <i class="posta"></i> <strong>E-posta :</strong> pelinsumarinette@gmail.com
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
