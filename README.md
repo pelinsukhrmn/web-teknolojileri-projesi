@@ -12,3 +12,7 @@ Sayfalar arası geçişi nav ile sağladım.
 ## Gün 3
 Hala Form gönderme konusunda sıkıntı yaşıyorum.
 Ana sayfa olan index.html yi ve hakkimda.html yi yükledim.
+
+##Sevgili Günlük
+API kısmını yapamadığımı sana üzülerek bildirmek isterim hem proje kapağı ne oluyor ki.
+Stiller için Ayrı bir stil.css oluşturdum.
