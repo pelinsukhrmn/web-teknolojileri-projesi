@@ -1,0 +1,203 @@
+/* Genel Body Arka Planı */
+body {
+  background-color: #f8f9fa;
+  padding-top: 20px;
+}
+
+/* Navbar Stilleri */
+.navbar {
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+}
+
+.navbar-brand,
+.navbar .nav-link {
+  font-weight: bold;
+}
+
+.navbar .nav-link {
+  color: #333;
+}
+
+.navbar .nav-link:hover,
+.nav-item.active .nav-link {
+  color: #007bff;
+  font-weight: 600;
+}
+
+/* Hosgeldin Mesajı */
+.hosgeldin-mesaji {
+  background-color: #e9ecef;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Container Maksimum Genişlik */
+.container {
+  max-width: 1200px;
+}
+
+/* Section Content */
+.section-content {
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  background-color: #f8f9fa;
+  /* gölge kaldırıldı */
+}
+
+/* Kart (Card) Stilleri */
+.card {
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+  height: 100%;
+  background-color: #fff;
+  /* gölge kaldırıldı */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  /* gölge kaldırıldı */
+}
+
+/* Küçük gölge sınıfı */
+.shadow-sm {
+  /* gölge kaldırıldı */
+  box-shadow: none;
+}
+
+/* Kart resmi */
+.card-img-top {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* Başlıklar */
+h1,
+h2 {
+  color: #2c3e50;
+  font-weight: 700;
+  margin-bottom: 30px;
+  /* gölge kaldırıldı */
+  text-shadow: none;
+}
+
+/* Card Başlıkları ve Metin */
+.card-title,
+.card-baslik {
+  color: #3498db;
+  font-weight: 600;
+}
+
+.card-text {
+  color: #555;
+}
+
+/* İletişim İkonları */
+.contact-info i {
+  width: 20px;
+  margin-right: 10px;
+  color: #3498db;
+}
+
+/* Butonlar */
+.btn-outline-primary {
+  border-color: #3498db;
+  color: #3498db;
+}
+
+.btn-outline-primary:hover {
+  background-color: #3498db;
+  color: white;
+}
+
+/* Hata Mesajları */
+.error-message {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* CV Kısmı */
+.cv-kismi {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+/* Simge Stilleri */
+.simge {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  padding: 0.5em 0.75em;
+  border-radius: 30%;
+}
+
+/* Slider */
+#orduSlider {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.slider-image {
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
+  /* filter ve transition kaldırıldı */
+  filter: none;
+  transition: none;
+}
+
+.carousel-item:hover .slider-image {
+  /* büyütme efekti kaldırıldı */
+  transform: none;
+}
+
+.slider-title {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.carousel-indicators {
+  bottom: 20px;
+}
+
+.carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+@media (max-width: 768px) {
+  .slider-image {
+    height: 350px;
+  }
+
+  .slider-title {
+    font-size: 1.2rem;
+    padding: 6px 15px;
+  }
+}
