@@ -20,3 +20,6 @@ Stiller için Ayrı bir stil.css oluşturdum.
 ## 
 Hallettim. Domain ettim projem aslında tamam ama hoşuma gitmeyen birkaç front end kısmı var.
 Düzentince her yerden güncelleyip rapor yazacağım
+
+## 
+Güncelenecek
