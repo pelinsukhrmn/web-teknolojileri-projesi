@@ -9,10 +9,14 @@ Temel Ana Sayfa, Hakkımda, CV ,Şehir, Mirasımız, Sanat ,İletişim, Giriş S
 Ufak Form Gönderme ve API işlemlerinde sıkıntı yaşıyorum.
 Sayfalar arası geçişi nav ile sağladım.
 
-## Gün 3
+##
 Hala Form gönderme konusunda sıkıntı yaşıyorum.
 Ana sayfa olan index.html yi ve hakkimda.html yi yükledim.
 
-## Sevgili Günlük
+##
 API kısmını yapamadığımı sana üzülerek bildirmek isterim hem proje kapağı ne oluyor ki.
 Stiller için Ayrı bir stil.css oluşturdum.
+
+## 
+Hallettim. Domain ettim projem aslında tamam ama hoşuma gitmeyen birkaç front end kısmı var.
+Düzentince her yerden güncelleyip rapor yazacağım
