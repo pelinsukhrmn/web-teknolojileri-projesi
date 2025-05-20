@@ -1,146 +1,132 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İletişim Formu</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>İletişim Formu</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="stil.css">
-    <style>
-    </style>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-      <nav class="navbar navbar-expand-lg navbar-light">
+
+  <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
       <a class="navbar-brand" href="index.html">Pelinsu Kahraman</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Ana Sayfa</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="hakkimda.html">Hakkımda</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="cv.html">CV</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="sehir.html">Şehir</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="mirasimiz.html">Mirasımız</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Spor.html">Spor</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="iletisim.html">İletişim</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="giris.html">Giriş Yap</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+          <li class="nav-item"><a class="nav-link" href="hakkimda.html">Hakkımda</a></li>
+          <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+          <li class="nav-item"><a class="nav-link" href="sehir.html">Şehir</a></li>
+          <li class="nav-item"><a class="nav-link" href="mirasimiz.html">Mirasımız</a></li>
+          <li class="nav-item"><a class="nav-link" href="Spor.html">Spor</a></li>
+          <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+          <li class="nav-item"><a class="nav-link" href="giris.html">Giriş Yap</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-</head>
-<body>
-    <div class="container mt-5">
-        <h2>İletişim Formu</h2>
-        <form onsubmit="formuGonder(event)">
-    <div class="mb-3">
+  <div class="container mt-5" id="app">
+    <h2>İletişim Formu</h2>
+    <form @submit.prevent="formuGonder">
+      <div class="mb-3">
         <label for="name">Adınız:</label>
-        <input type="text" id="name" class="form-control" required>
-    </div>
-    <div class="mb-3">
+        <input type="text" id="name" class="form-control" v-model="ad" required>
+      </div>
+      <div class="mb-3">
         <label for="email">Email Adresiniz:</label>
-        <input type="email" id="email" class="form-control" required>
-    </div>
-    <div class="mb-3">
+        <input type="email" id="email" class="form-control" v-model="email" required>
+      </div>
+      <div class="mb-3">
         <label for="phone">Telefon Numarası:</label>
-        <input type="tel" id="phone" class="form-control" pattern="[0-9]{10}" placeholder="5551234567" required>
-    </div>
-    <div class="mb-3">
+        <input type="tel" id="phone" class="form-control" v-model="telefon" pattern="[0-9]{10}" placeholder="5551234567" required>
+      </div>
+      <div class="mb-3">
         <label for="gender">Cinsiyetiniz:</label><br>
-        <input type="checkbox" id="male" value="Erkek"> Erkek
-        <input type="checkbox" id="female" value="Kadın"> Kadın
-    </div>
-    <div class="mb-3">
+        <input type="checkbox" id="male" value="Erkek" v-model="cinsiyet"> Erkek
+        <input type="checkbox" id="female" value="Kadın" v-model="cinsiyet"> Kadın
+      </div>
+      <div class="mb-3">
         <label for="subject">Konu:</label>
-        <select id="subject" class="form-control" required>
-            <option value="">Seçiniz</option>
-            <option value="Bilgi">Bilgi</option>
-            <option value="Öneri">Öneri</option>
-            <option value="Şikayet">Şikayet</option>
+        <select id="subject" class="form-control" v-model="konu" required>
+          <option value="">Seçiniz</option>
+          <option value="Bilgi">Bilgi</option>
+          <option value="Öneri">Öneri</option>
+          <option value="Şikayet">Şikayet</option>
         </select>
-    </div>
-    <div class="mb-3">
+      </div>
+      <div class="mb-3">
         <label for="message">Mesajınız:</label>
-        <textarea id="message" class="form-control" rows="5" required></textarea>
-    </div>
-    <div class="d-flex gap-2">
+        <textarea id="message" class="form-control" rows="5" v-model="mesaj" required></textarea>
+      </div>
+      <div class="d-flex gap-2">
         <button type="submit" class="btn btn-primary">Gönder</button>
-        <button type="button" class="btn btn-danger" onclick="formuTemizle()">Formu Sil</button>
-    </div>
-</form>
+        <button type="button" class="btn btn-danger" @click="formuTemizle()">Formu Sil</button>
+      </div>
+    </form>
+  </div>
 
-    </div>
-<script>
-    function formuGonder(event) {
-        event.preventDefault();
-
-        const ad = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const telefon = document.getElementById('phone').value.trim();
-        const cinsiyet = document.querySelectorAll('input[type=checkbox]:checked');
-        const cinsiyetDurumu = Array.from(cinsiyet).map(c => c.value).join(', ');
-        const konu = document.getElementById('subject').value;
-        const mesaj = document.getElementById('message').value.trim();
-
-        if (!ad || !email || !telefon || !cinsiyetDurumu || !konu || !mesaj) {
-            alert('Lütfen tüm alanları doldurunuz.');
-            return;
-        }
-
-        const emailicerik = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailicerik.test(email)) {
-            alert('Geçerli bir email adresi giriniz.');
-            return;
-        }
-
-        const telefonicerik = /^[0-9]{10}$/;
-        if (!telefonicerik.test(telefon)) {
-            alert('Telefon numarası 10 haneli ve sadece rakamlardan oluşmalıdır.');
-            return;
-        }
-
-        window.location.href = `iletisim-sonuc.html?ad=${encodeURIComponent(ad)}&email=${encodeURIComponent(email)}&telefon=${encodeURIComponent(telefon)}&cinsiyet=${encodeURIComponent(cinsiyetDurumu)}&konu=${encodeURIComponent(konu)}&mesaj=${encodeURIComponent(mesaj)}`;
-    }
-
-    function formuTemizle() {
-        document.getElementById('name').value = '';
-        document.getElementById('email').value = '';
-        document.getElementById('phone').value = '';
-        document.querySelectorAll('input[type=checkbox]').forEach(el => el.checked = false);
-        document.getElementById('subject').value = '';
-        document.getElementById('message').value = '';
-    }
-</script>
   <footer class="bg-light text-center py-3 mt-5">
     <p>Pelinsu Kahraman © 2025</p>
   </footer>
-</body>
-</html>
 
-       
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <script>
+    const { createApp } = Vue;
+
+    createApp({
+      data() {
+        return {
+          ad: '',
+          email: '',
+          telefon: '',
+          cinsiyet: [],
+          konu: '',
+          mesaj: ''
+        };
+      },
+      methods: {
+        formuGonder() {
+          const emailicerik = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          const telefonicerik = /^[0-9]{10}$/;
+
+          if (!this.ad || !this.email || !this.telefon || this.cinsiyet.length === 0 || !this.konu || !this.mesaj) {
+            alert('Lütfen tüm alanları doldurunuz.');
+            return;
+          }
+
+          if (!emailicerik.test(this.email)) {
+            alert('Geçerli bir email adresi giriniz.');
+            return;
+          }
+
+          if (!telefonicerik.test(this.telefon)) {
+            alert('Telefon numarası 10 haneli ve sadece rakamlardan oluşmalıdır.');
+            return;
+          }
+
+          const url = `iletisim-sonuc.html?ad=${encodeURIComponent(this.ad)}&email=${encodeURIComponent(this.email)}&telefon=${encodeURIComponent(this.telefon)}&cinsiyet=${encodeURIComponent(this.cinsiyet.join(', '))}&konu=${encodeURIComponent(this.konu)}&mesaj=${encodeURIComponent(this.mesaj)}`;
+          window.location.href = url;
+        },
+        formuTemizle() {
+          this.ad = '';
+          this.email = '';
+          this.telefon = '';
+          this.cinsiyet = [];
+          this.konu = '';
+          this.mesaj = '';
+        }
+      }
+    }).mount('#app');
+  </script>
+
 </body>
 </html>
