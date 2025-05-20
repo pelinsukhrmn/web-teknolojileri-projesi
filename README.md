@@ -23,3 +23,6 @@ Düzentince her yerden güncelleyip rapor yazacağım
 
 ## 
 Güncelenecek
+
+##
+DNS sorunsuz çalışırken şimdi site gözükmüyor
