@@ -26,3 +26,6 @@ Güncelenecek
 
 ##
 DNS sorunsuz çalışırken şimdi site gözükmüyor
+
+##
+Bitti.
