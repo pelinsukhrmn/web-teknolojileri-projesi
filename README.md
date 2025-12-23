@@ -14,7 +14,7 @@ Hala Form gönderme konusunda sıkıntı yaşıyorum.
 Ana sayfa olan index.html yi ve hakkimda.html yi yükledim.
 
 ##
-API kısmını yapamadığımı sana üzülerek bildirmek isterim hem proje kapağı ne oluyor ki.
+API kısmını yapamadığımı size üzülerek bildirmek istiyorum hem proje kapağı ne oluyor ki.
 Stiller için Ayrı bir stil.css oluşturdum.
 
 ## 
